@@ -97,3 +97,43 @@ window.addEventListener('resize', function(){
     canvas.height = window.innerHeight;
     effect.resize(canvas.width, canvas.height);
 });
+
+document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('start_btn').addEventListener('click', startBtn);
+    document.getElementById('close_btn').addEventListener('click', closeBtn);
+});
+
+function startBtn() {
+    var leftOverlay = document.getElementById('left_overlay');
+    var rightOverlay = document.getElementById('right_overlay');
+    var startBox = document.getElementById('start_box');
+
+    // Check if the screen width is over 2000px
+    if (window.innerWidth > 2000) {
+        var totalWidth = window.innerWidth;
+        var leftWidth = 400; // Width for the left overlay
+        var rightWidth = 1400; // Calculate the width for the right overlay
+        leftOverlay.style.width = leftWidth + 'px';
+        rightOverlay.style.width = rightWidth + 'px';
+
+        var sides = (totalWidth - (leftWidth + rightWidth +20))/2
+
+        leftOverlay.style.left = sides + 'px';
+        rightOverlay.style.right = sides + 'px';
+        
+    } else {
+        // Default values for screens under 2000px
+        leftOverlay.style.width = '25%';
+        rightOverlay.style.width = '74%';
+    }
+
+    startBox.style.display = 'none';
+}
+
+
+function closeBtn(){
+    document.getElementById('left_overlay').style.width = '0%';
+    document.getElementById('right_overlay').style.width = '0%';
+    document.getElementById('start_box').style.display = 'block';
+    document.getElementById('start_box').style.animation = 'fadeIn 0s ease-out forwards 0s';
+}

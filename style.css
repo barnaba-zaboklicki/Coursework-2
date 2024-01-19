@@ -35,9 +35,75 @@ body{
     transform: translate(-50%, -50%);
     z-index: 1;
 }
+#start_btn{
+    width: 150px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.2vw;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+#start_btn:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
+.left_overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;    
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(18, 18, 18, 0.95);
+    border-radius: 0px 15px 15px 0px;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+.right_overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;    
+    z-index: 1;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(50, 50, 50, 0.95);
+    border-radius: 15px 0px 0px 15px;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+.right_overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 1.2vw;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.right_overlay .close_btn{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 4vw;
+}
 @media (min-width: 2000px){
     .start_box h1{
         font-size: 3vw;
+    }
+    .right_overlay .close_btn{
+        font-size: 2vw;
     }
 }
 @keyframes fadeIn{
@@ -48,8 +114,7 @@ body{
     to{
         opacity: 1;
         transform: translateY(0);
-    }
-    
+    }   
 }
 canvas{
     position: absolute;
