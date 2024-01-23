@@ -18,9 +18,8 @@ gradient.addColorStop(1, 'purple'); // Add color stop to gradient
 
 class Symbol {
     constructor(x, y, fontSize, canvasHeight){
-        this.characters = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌ' +
-        'フムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトホモヨョロヲゴゾドボポヴッン' +
-        '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        this.characters = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~' +
+        '¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ';
         this.x = x;
         this.y = y;
         this.fontSize = fontSize;

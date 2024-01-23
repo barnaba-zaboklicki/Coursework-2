@@ -16,6 +16,7 @@ body{
     max-width: 1000px;
     height: 350px;  
     background: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(50, 50, 50, 0.5) 0px 0px 15px;
     backdrop-filter: blur(10px);
     border-radius: 30px;  
     display: flex;
@@ -79,7 +80,7 @@ body{
     right: 0;
     display: flex;
     justify-content: center;
-    background-color: rgba(50, 50, 50, 0.95);
+    background-color: rgba(25, 25, 25, 0.95);
     border-radius: 15px 0px 0px 15px;
     overflow-y: hidden;
     transition: 0.5s;
@@ -104,6 +105,9 @@ body{
     }
     .right_overlay .close_btn{
         font-size: 2vw;
+    }
+    .left_overlay, .right_overlay{
+        box-shadow: rgba(255, 255, 255, 0.25) 0px 0px 15px;
     }
 }
 @keyframes fadeIn{
